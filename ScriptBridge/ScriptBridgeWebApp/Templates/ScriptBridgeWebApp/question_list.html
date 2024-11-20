@@ -1,0 +1,99 @@
+
+<!-- home.html -->
+{% extends "ScriptBridgeWebApp/base.html" %}
+
+{% load static %}
+
+{% block title %}Question List Page{% endblock %}
+{% block static_file %} <link rel="stylesheet" href="{% static 'ScriptBridgeWebApp/question_list.css' %}">{% endblock %}
+{% block content %}
+<section class="questions">
+    <h2>Question List</h2>
+
+    <div class="subject" onclick="toggleDropdown('c-questions', this)">
+        C
+        <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+    </div>
+    <ul class="questions-list" id="c-questions">
+        {% for que in questions %}
+            {% if que.language == "C" %}
+                <li class="question-item">
+                    <span>Que : {{ que.question }} </span>
+                    <button class="view-solution-btn">
+                        <a href="{% url 'view_solution_path' que.sr_no %}">View Solution</a>
+                    </button>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <div class="subject" onclick="toggleDropdown('cpp-questions', this)">
+        C++
+        <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+    </div>
+    <ul class="questions-list" id="cpp-questions">
+        {% for que in questions %}
+            {% if que.language == "C++" %}
+                <li class="question-item">
+                    <span>Que : {{ que.question }} </span>
+                    <button class="view-solution-btn">
+                        <a href="{% url 'view_solution_path' que.sr_no %}">View Solution</a>
+                    </button>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <div class="subject" onclick="toggleDropdown('java-questions', this)">
+        Java
+        <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+    </div>
+    <ul class="questions-list" id="java-questions">
+        {% for que in questions %}
+            {% if que.language == "Java" %}
+                <li class="question-item">
+                    <span>Que : {{ que.question }} </span>
+                    <button class="view-solution-btn">
+                        <a href="{% url 'view_solution_path' que.sr_no %}">View Solution</a>
+                    </button>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <div class="subject" onclick="toggleDropdown('python-questions', this)">
+        Python
+        <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+    </div>
+    <ul class="questions-list" id="python-questions">
+        {% for que in questions %}
+            {% if que.language == "Python" %}
+                <li class="question-item">
+                    <span>Que : {{ que.question }} </span>
+                    <button class="view-solution-btn">
+                        <a href="{% url 'view_solution_path' que.sr_no %}">View Solution</a>
+                    </button>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <div class="subject" onclick="toggleDropdown('javascript-questions', this)">
+        Java Script
+        <span class="arrow">&#x25BC;</span> <!-- Down arrow -->
+    </div>
+    <ul class="questions-list" id="javascript-questions">
+        {% for que in questions %}
+            {% if que.language == "JavaScript" %}
+                <li class="question-item">
+                    <span>Que : {{ que.question }} </span>
+                    <button class="view-solution-btn">
+                        <a href="{% url 'view_solution_path' que.sr_no %}">View Solution</a>
+                    </button>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+</section>
+{% endblock %}

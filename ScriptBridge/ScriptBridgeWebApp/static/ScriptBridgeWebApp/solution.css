@@ -1,0 +1,82 @@
+/* solution.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #4CAF50;
+    font-size: 1.8rem;
+}
+
+.solution-content .details {
+    margin-bottom: 20px;
+}
+
+.solution-content .details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.solution-content .details .label {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.solution-content .question {
+    background: #f4f4f4;
+    padding: 10px 15px;
+    border-left: 4px solid #4CAF50;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.code-section .code {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.footer .btn:hover {
+    background: #45a049;
+}
