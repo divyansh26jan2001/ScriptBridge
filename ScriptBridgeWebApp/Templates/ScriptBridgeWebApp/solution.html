@@ -1,0 +1,27 @@
+{% extends "ScriptBridgeWebApp/base.html" %}
+
+{% load static %}
+
+{% block title %}Solution Page{% endblock %}
+{% block static_file %} <link rel="stylesheet" href="{% static 'ScriptBridgeWebApp/solution.css' %}"> {% endblock %}
+{% block content %}
+<div class="container">
+    <header class="header">
+        <h1>Solution for Question {{ question.sr_no }}</h1>
+    </header>
+    <section class="solution-content">
+        <div class="details">
+            <h2><span class="label">Language:</span> {{ question.language }}</h2>
+            <p><strong>Question:</strong></p>
+            <blockquote class="question">{{ question.question }}</blockquote>
+        </div>
+        <div class="code-section">
+            <p><strong>Answer:</strong></p>
+            <pre class="code">{{ question.answer }}</pre>
+        </div>
+    </section>
+    <footer class="footer">
+        <a href="https://www.programiz.com/c-programming/online-compiler/?code={{ encoded_code }}" class="btn try-it-btn">Try it yourself</a>
+    </footer>
+</div>
+{% endblock %}

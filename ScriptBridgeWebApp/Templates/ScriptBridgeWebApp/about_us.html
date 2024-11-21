@@ -1,0 +1,97 @@
+<!-- home.html -->
+{% extends "ScriptBridgeWebApp/base.html" %}
+
+{% load static %}
+
+{% block title %}About us Page{% endblock %}
+{% block static_file %} <link rel="stylesheet" href="{% static 'ScriptBridgeWebApp/about_us.css' %}">{% endblock %}
+
+
+
+{% block content %}
+<section class="project-leader">
+    <h2>Project Leader</h2>
+    <div class="leader-info card">
+        <div class="leader-photo">
+            <img src="{% static 'ScriptBridgeWebApp/my.jpeg' %}" alt="Project Leader">
+        </div>
+        <div class="leader-details">
+            <p><strong>Name:</strong> Divyansh Baranwal</p>
+            <p><strong>Phone:</strong> +91 80 811 77 216</p>
+            <p><strong>Email:</strong> divyanshbaranwalup37@gmail.com</p>
+            <p><strong>Qualification:</strong> M.Tech. in Computer Science</p>
+            <div class="social-links-user">
+                <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team-members">
+    <h2>Team Members</h2>
+    <div class="team-cards">
+        <div class="member card">
+            <div class="member-photo">
+                <img src="{% static 'ScriptBridgeWebApp/man.png' %}" alt="Team Member 1">
+            </div>
+            <div class="member-details">
+                <p><strong>Name:</strong> Ashutosh</p>
+                <p><strong>Phone:</strong> +91 345 678 901</p>
+                <p><strong>Email:</strong> jane.smith@example.com</p>
+                <p><strong>Qualification:</strong> Bachelor of Computer Application</p>
+                <div class="social-links-user">
+                    <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="member card">
+            <div class="member-photo">
+                <img src="{% static 'ScriptBridgeWebApp/man.png' %}" alt="Team Member 2">
+            </div>
+            <div class="member-details">
+                <p><strong>Name:</strong> Vinay Maurya</p>
+                <p><strong>Phone:</strong> +91 456 789 012</p>
+                <p><strong>Email:</strong> michael.johnson@example.com</p>
+                <p><strong>Qualification:</strong> Bachelor of Computer Application</p>
+                <div class="social-links-user">
+                    <a href="#">Instagram</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="member card">
+            <div class="member-photo">
+                <img src="{% static 'ScriptBridgeWebApp/woman.jpg' %}" alt="Team Member 3">
+            </div>
+            <div class="member-details">
+                <p><strong>Name:</strong> emi;ly</p>
+                
+                <p><strong>Email:</strong> emily.brown@example.com</p>
+                <p><strong>Qualification:</strong> Bachelor of Computer Application</p>
+                <div class="social-links-user">
+                     <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="member card">
+            <div class="member-photo">
+                <img src="{% static 'ScriptBridgeWebApp/woman.jpg' %}" alt="Team Member 4">
+            </div>
+            <div class="member-details">
+                <p><strong>Name:</strong> emily</p>
+                
+                <p><strong>Email:</strong> emily.brown@example.com</p>
+                <p><strong>Qualification:</strong> Bachelor of Computer Application</p>
+                <div class="social-links-user">
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+

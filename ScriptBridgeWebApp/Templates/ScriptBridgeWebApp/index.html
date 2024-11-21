@@ -1,0 +1,21 @@
+<!-- home.html -->
+{% extends "ScriptBridgeWebApp/base.html" %}
+
+{% block title %}Script Bridge{% endblock %}
+
+{% block content %}
+<section class="questions">
+    <h2>Recently Added Questions</h2>
+    <ul class="question-list">
+        {% for question in questions%}
+        <li>
+            <span>Que {{ question.sr_no }}: {{question.question}}.</span>
+            <button class="view-solution-btn" onclick = "window.location.href= '{% url 'view_solution_path' question.sr_no %}' ">View Solution</button>
+        </li>
+        
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
+
+
